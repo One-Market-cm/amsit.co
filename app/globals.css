@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Open Sans', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+  
+  --color-primary: #0A1E3D;
+  --color-primary-50: #E6EAF0;
+  --color-primary-100: #CCD5E1;
+  --color-primary-200: #99ABC3;
+  --color-primary-300: #6681A5;
+  --color-primary-400: #335787;
+  --color-primary-500: #0A1E3D;
+  --color-primary-600: #081831;
+  --color-primary-700: #061225;
+  --color-primary-800: #040C19;
+  --color-primary-900: #02060C;
+  
+  --color-secondary: #FF6B35;
+  --color-secondary-50: #FFEDE8;
+  --color-secondary-100: #FFDBD0;
+  --color-secondary-200: #FFB7A1;
+  --color-secondary-300: #FF9372;
+  --color-secondary-400: #FF6F43;
+  --color-secondary-500: #FF6B35;
+  --color-secondary-600: #FF4914;
+  --color-secondary-700: #E03800;
+  --color-secondary-800: #AD2B00;
+  --color-secondary-900: #7A1E00;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    @apply text-gray-900 bg-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-secondary hover:bg-secondary-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply bg-primary hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  
+  .container-custom {
+    @apply container mx-auto px-4 md:px-6 lg:px-8;
+  }
+}
